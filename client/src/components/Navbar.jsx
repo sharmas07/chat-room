@@ -2,8 +2,8 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className='bg-pink-400 w-10 h-10'>
-        <h2>Quick Chat</h2>
+    <div className='p-4'>
+        <h2 className='text-3xl font-bold ml-16'>Quick Chat</h2>
     </div>
   )
 }
