@@ -40,6 +40,7 @@ function App() {
   };
 
   const handleSend = (e) => {
+    e.preventDefault();
     if(!username){
       alert('Please enter a username')
       return;
@@ -52,7 +53,6 @@ function App() {
 
     socket.emit("message", newMessage);
     setMessages((prevMessages) => [...prevMessages, newMessage]);
-    e.preventDefault();
     console.log("Sending the message", inputMessage);
     setInputMessage("");
     console.log(messages);
