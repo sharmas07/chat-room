@@ -26,10 +26,15 @@ const io = new Server(server, {
 });
 
 io.on('connection', (socket)=>{
-    console.log("a user connected");
-    console.log(socket);
+    socket.on('user-connected', (user)=>{
+        console.log("User connected:", user)
+        socket.broadcast.emit('welcome-user', user);
+    })
+    socket.on('message',(message)=>{
+        socket.broadcast.emit('message', message);
+    })
+    
 })
-
 
 
 const startServer = async()=>{
