@@ -1,2 +1,2 @@
-const baseURL =  'http://localhost:8080'
+const baseURL =  'https://chat-room-70he.onrender.com'
 export default baseURL
