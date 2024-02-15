@@ -3,6 +3,9 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import LeftMessage from "./components/LeftMessage";
 import RightMessage from "./components/RightMessage";
+import baseURL from "./baseURL";
+import {io} from "socket.io-client";
+const socket = io(baseURL);
 
 function App() {
   const user  = "micky";
